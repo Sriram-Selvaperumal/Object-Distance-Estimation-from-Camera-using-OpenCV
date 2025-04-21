@@ -13,6 +13,7 @@ KNOWN_WIDTH = 5.0
 ref_image = cv2.imread("ref_img.png")
 hsv_ref = cv2.cvtColor(ref_image, cv2.COLOR_BGR2HSV)
 
+# Adjust the Values of LH,LS,LV,UH,US,UV as per Your Object
 lower_bound = np.array([LH, LS, LV])
 upper_bound = np.array([UH, US, UV])
 mask = cv2.inRange(hsv_ref, lower_bound, upper_bound)
