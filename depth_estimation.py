@@ -13,7 +13,7 @@ KNOWN_WIDTH = 5.0
 ref_image = cv2.imread("ref_img.png")
 hsv_ref = cv2.cvtColor(ref_image, cv2.COLOR_BGR2HSV)
 
-lower_bound = np.array([69, 61, 114])
+lower_bound = np.array([LH, LS, 114])
 upper_bound = np.array([134, 255, 226])
 mask = cv2.inRange(hsv_ref, lower_bound, upper_bound)
 
