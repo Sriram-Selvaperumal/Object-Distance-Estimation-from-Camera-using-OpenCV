@@ -13,8 +13,8 @@ KNOWN_WIDTH = 5.0
 ref_image = cv2.imread("ref_img.png")
 hsv_ref = cv2.cvtColor(ref_image, cv2.COLOR_BGR2HSV)
 
-lower_bound = np.array([LH, LS, 114])
-upper_bound = np.array([134, 255, 226])
+lower_bound = np.array([LH, LS, LV])
+upper_bound = np.array([UH, 255, 226])
 mask = cv2.inRange(hsv_ref, lower_bound, upper_bound)
 
 contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
